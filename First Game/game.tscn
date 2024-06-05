@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbj6j6yi56qtd"]
+
+[ext_resource type="Texture2D" uid="uid://t2kmr8xyqj5x" path="res://pixil-frame-0.png" id="1_mbfhs"]
+[ext_resource type="Script" path="res://Sprite2D.gd" id="2_bnfcy"]
+[ext_resource type="Script" path="res://Label2.gd" id="3_rt3gd"]
+
+[node name="Label" type="Label"]
+offset_left = 365.0
+offset_top = 29.0
+offset_right = 795.0
+offset_bottom = 52.0
+text = "Ryan Rodriguez's Totally Awesome and Amazing Project"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(211.397, 363)
+scale = Vector2(2.44795, 2.23531)
+texture = ExtResource("1_mbfhs")
+script = ExtResource("2_bnfcy")
+
+[node name="LabelSecret" type="Label" parent="."]
+layout_mode = 0
+offset_left = -11.0
+offset_top = 36.0
+offset_right = 442.0
+offset_bottom = 188.0
+theme_override_colors/font_color = Color(0.86283, 0.235191, 0.673561, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 111
+text = "YIPPEE!!!"
+script = ExtResource("3_rt3gd")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 675.0
+offset_top = 595.0
+offset_right = 789.0
+offset_bottom = 626.0
+text = "Secret Button
+"
+
+[connection signal="pressed" from="Button" to="LabelSecret" method="_on_button_pressed"]
